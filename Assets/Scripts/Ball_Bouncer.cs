@@ -16,6 +16,9 @@ public class Ball_Bouncer : MonoBehaviour
     private void Update()
     {
         lastFrameVelocity = rb.velocity;
+        rb.velocity = rb.velocity.normalized * Mathf.Max(lastFrameVelocity.magnitude, velocity);
+        // Eliminate any speed in Y-Axis (That caused the velocity to be static and it appears to be slow)
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 
         //freezing y axis
         transform.position = new Vector3(transform.position.x, 1, transform.position.z);
@@ -24,7 +27,7 @@ public class Ball_Bouncer : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         var speed = lastFrameVelocity.magnitude;
-
-        rb.velocity = Vector3.Reflect(lastFrameVelocity.normalized, collision.contacts[0].normal) * velocity;
+        Vector3 direction = Vector3.Reflect(lastFrameVelocity.normalized, collision.contacts[0].normal);
+        rb.velocity = direction * Mathf.Max(speed, velocity);
     }
 }
