@@ -7,14 +7,13 @@ public class Box_Row_Movement : MonoBehaviour
         InvokeRepeating("moveRow", 10f, 10f);
     }
 
-    void Update()
-    {
-
-    }
-
     void moveRow()
     {
         // 1.3 movement_value * 5 steps = 6.5 final_place
         transform.position += new Vector3(0, 0, -1.3f);
+        print(transform.position.z);
+
+        if (transform.position.z <= -1.2)   // we should've checked for -2.5 but there's a wrong internal calculation with float
+            print("game over");
     }
 }

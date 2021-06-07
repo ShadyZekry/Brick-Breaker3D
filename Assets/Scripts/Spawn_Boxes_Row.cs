@@ -6,10 +6,6 @@ public class Spawn_Boxes_Row : MonoBehaviour
     [SerializeField]
     GameObject boxPrefab;
     [SerializeField]
-    float spawnFrom;
-    [SerializeField]
-    float spawnTo;
-    [SerializeField]
     List<float> availablePositions;
     void Start()
     {
@@ -27,6 +23,8 @@ public class Spawn_Boxes_Row : MonoBehaviour
             availablePositions.RemoveAt(Random.Range(0, availablePositions.Count - 1));
 
         GameObject newRow = new GameObject("Row");
+        newRow.transform.position = new Vector3(0, 1, 4);
+        newRow.AddComponent<Box_Row_Movement>();
         availablePositions.ForEach(delegate (float position)
         {
             Vector3 randomVector = new Vector3(position, 1, 4);
