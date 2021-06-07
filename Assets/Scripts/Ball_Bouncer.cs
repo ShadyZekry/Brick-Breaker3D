@@ -17,6 +17,7 @@ public class Ball_Bouncer : MonoBehaviour
     {
         lastFrameVelocity = rb.velocity;
         rb.velocity = rb.velocity.normalized * Mathf.Max(lastFrameVelocity.magnitude, velocity);
+        
         // Eliminate any speed in Y-Axis (That caused the velocity to be static and it appears to be slow)
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 
