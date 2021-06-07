@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8128687870201969015}
   - component: {fileID: 8128687870201969014}
   - component: {fileID: 8128687870201969013}
+  - component: {fileID: 2817744343190795209}
   m_Layer: 0
   m_Name: BrokenBox
   m_TagString: Untagged
@@ -96,3 +97,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2817744343190795209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8128687870201969012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccd206a63232f5429dd9f69630df138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagedBoxPrefab: {fileID: 8128687870201969012}
+  isBrokenBox: 1
