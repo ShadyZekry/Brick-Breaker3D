@@ -2,13 +2,11 @@ using UnityEngine;
 
 public class Box_Row_Movement : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("moveRow", 10f, 10f);
     }
 
-    // Update is called once per frame
     void Update()
     {
 
