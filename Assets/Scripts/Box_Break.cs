@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class Box_Break : MonoBehaviour
 {
+    bool isBrokenBox = false;
     [SerializeField]
-    GameObject damagedBoxPrefab;
-    [SerializeField]
-    bool isBrokenBox;
+    Material brokenMaterial;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -16,10 +15,9 @@ public class Box_Break : MonoBehaviour
             return;
         }
 
-        GameObject gobj = GetComponent<GameObject>();
-        gobj = Instantiate(damagedBoxPrefab, transform.position, Quaternion.identity, transform.parent);
         Renderer rend = GetComponent<Renderer>();
+        rend.material = brokenMaterial;
         rend.material.SetTextureOffset("_MainTex", new Vector2(Random.Range(-10, 10), Random.Range(-10, 10)));
-        Destroy(gameObject);
+        isBrokenBox = true;
     }
 }

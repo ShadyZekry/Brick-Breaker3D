@@ -110,3 +110,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagedBoxPrefab: {fileID: 8128687870201969012, guid: ba1e500d2b98bad44ae7edb38eba64cc, type: 3}
+  isBrokenBox: 0
+  brokenMaterial: {fileID: 2100000, guid: 9a9a07df050fbbf419fedac11e4a64d7, type: 2}
