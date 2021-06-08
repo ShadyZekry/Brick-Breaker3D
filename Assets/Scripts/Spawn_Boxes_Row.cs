@@ -23,6 +23,7 @@ public class Spawn_Boxes_Row : MonoBehaviour
         GameObject newRow = new GameObject("Row");
         newRow.transform.position = new Vector3(0, 1, 4);
         newRow.AddComponent<Box_Row_Movement>().gameManager = gameObject;
+        newRow.transform.parent=transform.parent;
         positions.ForEach(delegate (float position)
         {
             Vector3 randomVector = new Vector3(position, 1, 4);
