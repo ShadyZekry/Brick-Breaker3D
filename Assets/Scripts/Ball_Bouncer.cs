@@ -3,10 +3,9 @@ using UnityEngine;
 public class Ball_Bouncer : MonoBehaviour
 {
     [SerializeField]
-    private float velocity;
+    public float velocity;
     private Vector3 lastFrameVelocity;
     private Rigidbody rb;
-    private bool isCaught = true;
 
     private void Start()
     {
@@ -15,11 +14,7 @@ public class Ball_Bouncer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            isCaught = false;
-            rb.velocity = new Vector3(velocity, 0, velocity);
-        }
+        bool isCaught = transform.GetComponent<Ball_Catch>().isCaught;
         if (isCaught) return;
 
         lastFrameVelocity = rb.velocity;
