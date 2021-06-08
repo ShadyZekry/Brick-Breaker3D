@@ -4,17 +4,17 @@ public class Ball_Catch : MonoBehaviour
 {
     public bool isCaught = true;
     Rigidbody rb;
-    [SerializeField]
-    KeyCode launchKey;
+    private Game_Variables gameVars;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        gameVars = GameObject.Find("GameManager").GetComponent<Game_Variables>();
     }
     void Update()
     {
-        float velocity = transform.GetComponent<Ball_Bouncer>().velocity;
+        float velocity = gameVars.ballVelocity;
 
-        if (isCaught && Input.GetKey(launchKey))
+        if (isCaught && Input.GetKey(gameVars.launchKey))
         {
             isCaught = false;
 
