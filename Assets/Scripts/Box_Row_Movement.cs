@@ -29,6 +29,6 @@ public class Box_Row_Movement : MonoBehaviour
 
 
         if (transform.position.z <= -1.2)   // we should've checked for -2.5 but there's a wrong internal calculation with float
-            print("game over");
+            Time.timeScale = 0.3f;
     }
 }

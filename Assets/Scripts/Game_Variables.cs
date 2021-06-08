@@ -16,4 +16,10 @@ public class Game_Variables : MonoBehaviour
     public KeyCode launchKey;
     [SerializeField]
     public float ballVelocity;
+    [SerializeField]
+    public Vector3 barStartingPosition;
+    [SerializeField]
+    public float cameraRotationFactor;
+    [SerializeField]
+    public float cameraRotationRange = 7;
 }
