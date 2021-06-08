@@ -29,6 +29,8 @@ public class Ball_Bouncer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.collider.name == "bottom_wall")
+            Time.timeScale = 0;
         var speed = lastFrameVelocity.magnitude;
         Vector3 direction = Vector3.Reflect(lastFrameVelocity.normalized, collision.contacts[0].normal);
         rb.velocity = direction * Mathf.Max(speed, gameVars.ballVelocity);
