@@ -8,6 +8,7 @@ public class Pause_Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.Find("GameOverMenu") != null) return;
         if (!Input.GetKeyDown(KeyCode.Escape)) return;
 
         if (isPaused)
@@ -27,7 +28,8 @@ public class Pause_Game : MonoBehaviour
         pauseMenu.SetActive(!isPaused);
         isPaused = !isPaused;
     }
-    public void exitGame(){
+    public void exitGame()
+    {
         Application.Quit();
     }
 }
