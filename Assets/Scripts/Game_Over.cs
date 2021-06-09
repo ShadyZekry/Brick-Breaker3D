@@ -12,6 +12,7 @@ public class Game_Over : MonoBehaviour
     }
     public void restartGame()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale=1;
     }
 }
