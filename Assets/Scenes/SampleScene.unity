@@ -210,7 +210,7 @@ MonoBehaviour:
   - 2.2
   - 3.3
   - 4.4
-  boxSpawnCooldown: 3
+  boxSpawnCooldown: 20
   boxesMovementSpeed: 5
   barMovementSpeed: 1
   launchKey: 323
@@ -539,7 +539,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f2dfc02d8ed42c44487178e7d6c52c4a, type: 2}
+  - {fileID: 2100000, guid: e9f215594a69c8943a7161b2a8142ae1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
