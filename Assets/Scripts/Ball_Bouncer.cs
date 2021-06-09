@@ -24,7 +24,7 @@ public class Ball_Bouncer : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 
         //freezing y axis
-        transform.position = new Vector3(transform.position.x, 1, transform.position.z);
+        transform.localPosition = new Vector3(transform.localPosition.x, 1, transform.localPosition.z);
     }
 
     private void OnCollisionEnter(Collision collision)

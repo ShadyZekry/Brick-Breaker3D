@@ -21,13 +21,15 @@ public class Spawn_Boxes_Row : MonoBehaviour
             positions.RemoveAt(Random.Range(0, positions.Count - 1));
 
         GameObject newRow = new GameObject("Row");
-        newRow.transform.position = new Vector3(0, 1, 4);
+        newRow.transform.parent = transform.parent;
+        newRow.transform.localPosition = new Vector3(0, 1, 4);
         newRow.AddComponent<Box_Row_Movement>().gameManager = gameObject;
-        newRow.transform.parent=transform.parent;
         positions.ForEach(delegate (float position)
         {
-            Vector3 randomVector = new Vector3(position, 1, 4);
-            Instantiate(gameVars.boxPrefab, randomVector, Quaternion.identity, newRow.transform);
+            Vector3 randomVector = new Vector3(position, 0, 0);
+            GameObject newBox = Instantiate(gameVars.boxPrefab);
+            newBox.transform.SetParent(newRow.transform);
+            newBox.transform.localPosition = randomVector;
         });
     }
 
