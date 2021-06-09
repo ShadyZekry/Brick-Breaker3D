@@ -284,9 +284,9 @@ MonoBehaviour:
   - 2.2
   - 3.3
   - 4.4
-  boxSpawnCooldown: 3
+  boxSpawnCooldown: 10
   boxesMovementSpeed: 5
-  barMovementSpeed: 1
+  barMovementSpeed: 0.5
   launchKey: 32
   ballVelocity: 10
   barStartingPosition: {x: 0, y: 1, z: -3.5}
