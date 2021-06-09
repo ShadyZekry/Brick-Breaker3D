@@ -12,7 +12,7 @@ public class Camera_Effect : MonoBehaviour
 
     void Update()
     {
-        xMovement = Input.GetAxis("Mouse X");
+        xMovement = Input.GetAxis(gameVars.barInputAxis);
         float zAngle = transform.eulerAngles.z <= 180 ? transform.eulerAngles.z : transform.eulerAngles.z - 360;
 
         if (zAngle >= gameVars.cameraRotationRange) transform.eulerAngles = new Vector3(0, 0, gameVars.cameraRotationRange);

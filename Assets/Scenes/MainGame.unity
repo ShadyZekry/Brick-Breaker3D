@@ -284,12 +284,13 @@ MonoBehaviour:
   - 2.2
   - 3.3
   - 4.4
-  boxSpawnCooldown: 10
+  boxSpawnCooldown: 3
   boxesMovementSpeed: 5
   barMovementSpeed: 1
   launchKey: 32
   ballVelocity: 10
   barStartingPosition: {x: 0, y: 1, z: -3.5}
+  barInputAxis: Horizontal
   cameraRotationFactor: 100
   cameraRotationRange: 7
 --- !u!1001 &216714418
@@ -753,6 +754,7 @@ MonoBehaviour:
   launchKey: 323
   ballVelocity: 10
   barStartingPosition: {x: 0, y: 1, z: -3.5}
+  barInputAxis: Mouse X
   cameraRotationFactor: 100
   cameraRotationRange: 7
 --- !u!1 &658158608

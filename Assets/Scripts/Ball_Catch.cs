@@ -24,7 +24,7 @@ public class Ball_Catch : MonoBehaviour
 
         if (isCaught)
         {
-            GameObject bar = GameObject.Find("Bar");
+            GameObject bar = transform.root.Find("Bar").gameObject;
             transform.localPosition = new Vector3(bar.transform.localPosition.x, 1, -2.9f);
         }
 

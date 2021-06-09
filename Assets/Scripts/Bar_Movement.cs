@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Bar_Movement : MonoBehaviour
 {
-    float xMovement;
+    private float xMovement;
     private Game_Variables gameVars;
     private bool shouldMove;
 
@@ -12,7 +12,7 @@ public class Bar_Movement : MonoBehaviour
     }
     void Update()
     {
-        xMovement = Input.GetAxis("Mouse X");
+        xMovement = Input.GetAxis(gameVars.barInputAxis);
         shouldMove = (transform.localPosition.x <= 4 && xMovement < 0) || (transform.localPosition.x >= -4 && xMovement > 0);
         if (!shouldMove) return;
         transform.localPosition += new Vector3(xMovement * Time.deltaTime * 50 * gameVars.barMovementSpeed, 0, 0);

@@ -19,6 +19,8 @@ public class Game_Variables : MonoBehaviour
     [SerializeField]
     public Vector3 barStartingPosition;
     [SerializeField]
+    public string barInputAxis;
+    [SerializeField]
     public float cameraRotationFactor;
     [SerializeField]
     public float cameraRotationRange = 7;
