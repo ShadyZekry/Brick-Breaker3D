@@ -30,7 +30,7 @@ public class Ball_Bouncer : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.name == "bottom_wall")
-            GameObject.Find("Canvas").GetComponent<Game_Over>().gameOver();
+            GameObject.Find("Canvas").GetComponent<Game_Over>().gameOver(transform.root.name);
         var speed = lastFrameVelocity.magnitude;
         Vector3 direction = Vector3.Reflect(lastFrameVelocity.normalized, collision.contacts[0].normal);
         rb.velocity = direction * Mathf.Max(speed, gameVars.ballVelocity);

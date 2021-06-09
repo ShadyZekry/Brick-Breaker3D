@@ -28,6 +28,6 @@ public class Box_Row_Movement : MonoBehaviour
 
 
         if (transform.localPosition.z <= -1.2)   // we should've checked for -2.5 but there's a wrong internal calculation with float
-            GameObject.Find("Canvas").GetComponent<Game_Over>().gameOver();
+            GameObject.Find("Canvas").GetComponent<Game_Over>().gameOver(transform.root.name);
     }
 }
