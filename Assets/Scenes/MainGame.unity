@@ -287,7 +287,7 @@ MonoBehaviour:
   boxSpawnCooldown: 10
   boxesMovementSpeed: 5
   barMovementSpeed: 1
-  launchKey: 323
+  launchKey: 32
   ballVelocity: 10
   barStartingPosition: {x: 0, y: 1, z: -3.5}
   cameraRotationFactor: 100
@@ -573,6 +573,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1085439256}
     m_Modifications:
+    - target: {fileID: 2248547197572230343, guid: 3bac527d581d8124da81b837f3a30ff0, type: 3}
+      propertyPath: gameVars
+      value: 
+      objectReference: {fileID: 206750733}
     - target: {fileID: 3482486960837853825, guid: 3bac527d581d8124da81b837f3a30ff0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -621,6 +625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball
       objectReference: {fileID: 0}
+    - target: {fileID: 8883684415324093022, guid: 3bac527d581d8124da81b837f3a30ff0, type: 3}
+      propertyPath: gameVars
+      value: 
+      objectReference: {fileID: 206750733}
     - target: {fileID: 8883684415324093022, guid: 3bac527d581d8124da81b837f3a30ff0, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1557,6 +1565,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.7071068
       objectReference: {fileID: 0}
+    - target: {fileID: 6744304221553556138, guid: 0b69602c642aa2146b498ce3d0923dd4, type: 3}
+      propertyPath: gameVars
+      value: 
+      objectReference: {fileID: 206750733}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b69602c642aa2146b498ce3d0923dd4, type: 3}
 --- !u!1001 &1201463237
@@ -2477,6 +2489,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 658158609}
     m_Modifications:
+    - target: {fileID: 2248547197572230343, guid: 3bac527d581d8124da81b837f3a30ff0, type: 3}
+      propertyPath: gameVars
+      value: 
+      objectReference: {fileID: 601810230}
     - target: {fileID: 3482486960837853825, guid: 3bac527d581d8124da81b837f3a30ff0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2525,6 +2541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball
       objectReference: {fileID: 0}
+    - target: {fileID: 8883684415324093022, guid: 3bac527d581d8124da81b837f3a30ff0, type: 3}
+      propertyPath: gameVars
+      value: 
+      objectReference: {fileID: 601810230}
     - target: {fileID: 8883684415324093022, guid: 3bac527d581d8124da81b837f3a30ff0, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2668,5 +2688,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 6744304221553556138, guid: 0b69602c642aa2146b498ce3d0923dd4, type: 3}
+      propertyPath: gameVars
+      value: 
+      objectReference: {fileID: 601810230}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b69602c642aa2146b498ce3d0923dd4, type: 3}

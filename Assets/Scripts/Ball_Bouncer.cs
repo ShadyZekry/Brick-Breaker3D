@@ -8,7 +8,7 @@ public class Ball_Bouncer : MonoBehaviour
 
     private void Start()
     {
-        gameVars = GameObject.Find("GameManager").GetComponent<Game_Variables>();
+        gameVars = transform.root.GetChild(0).GetComponent<Game_Variables>();
         rb = GetComponent<Rigidbody>();
     }
 

@@ -7,7 +7,7 @@ public class Camera_Effect : MonoBehaviour
     private bool shouldRotate;
     void Start()
     {
-        gameVars = GameObject.Find("GameManager").GetComponent<Game_Variables>();
+        gameVars = transform.root.GetChild(0).GetComponent<Game_Variables>();
     }
 
     void Update()

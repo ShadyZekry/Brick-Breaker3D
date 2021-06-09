@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5298678182572353812}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,15 +43,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d389a6d82b09b74b9b1190da4ecddc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxPrefab: {fileID: 2710756806843326597, guid: 9ebe3f040f9e27a408b89c6e576e5175, type: 3}
-  availablePositions:
-  - -4.4
-  - -3.3
-  - -2.2
-  - -1.1
-  - 0
-  - 1.1
-  - 2.2
-  - 3.3
-  - 4.4
-  boxSpawnCooldown: 3

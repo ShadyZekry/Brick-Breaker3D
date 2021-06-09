@@ -8,7 +8,7 @@ public class Bar_Movement : MonoBehaviour
 
     void Start()
     {
-        gameVars = GameObject.Find("GameManager").GetComponent<Game_Variables>();
+        gameVars = transform.root.GetChild(0).GetComponent<Game_Variables>();
     }
     void Update()
     {

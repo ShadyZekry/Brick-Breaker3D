@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class Box_Row_Movement : MonoBehaviour
 {
-    public GameObject gameManager;
     private Vector3 targetPosition;
     private Game_Variables gameVars;
 
     void Start()
     {
-        gameVars = GameObject.Find("GameManager").GetComponent<Game_Variables>();
+        gameVars = transform.root.GetChild(0).GetComponent<Game_Variables>();
         targetPosition = transform.localPosition;
         float boxSpawnCooldown = gameVars.boxSpawnCooldown;
         InvokeRepeating("moveRow", boxSpawnCooldown, boxSpawnCooldown);
@@ -24,7 +23,7 @@ public class Box_Row_Movement : MonoBehaviour
     void moveRow()
     {
         // 1.3 movement_value * 5 steps = 6.5 final_place
-        targetPosition = transform.localPosition + new Vector3(0, 0, -1.3f);
+        targetPosition = transform.position + new Vector3(0, 0, -1.3f);
         transform.LookAt(targetPosition);
 
 

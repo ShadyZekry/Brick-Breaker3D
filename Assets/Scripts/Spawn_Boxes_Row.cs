@@ -6,7 +6,7 @@ public class Spawn_Boxes_Row : MonoBehaviour
     private Game_Variables gameVars;
     void Start()
     {
-        gameVars = GameObject.Find("GameManager").GetComponent<Game_Variables>();
+        gameVars = transform.root.GetChild(0).GetComponent<Game_Variables>();
         InvokeRepeating("SpawnRandom", 0.1f, gameVars.boxSpawnCooldown);
     }
     void SpawnRandom()
@@ -23,7 +23,7 @@ public class Spawn_Boxes_Row : MonoBehaviour
         GameObject newRow = new GameObject("Row");
         newRow.transform.parent = transform.parent;
         newRow.transform.localPosition = new Vector3(0, 1, 4);
-        newRow.AddComponent<Box_Row_Movement>().gameManager = gameObject;
+        newRow.AddComponent<Box_Row_Movement>();
         positions.ForEach(delegate (float position)
         {
             Vector3 randomVector = new Vector3(position, 0, 0);

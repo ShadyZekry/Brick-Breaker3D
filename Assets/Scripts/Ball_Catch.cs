@@ -7,8 +7,8 @@ public class Ball_Catch : MonoBehaviour
     private Game_Variables gameVars;
     void Start()
     {
+        gameVars = transform.root.GetChild(0).GetComponent<Game_Variables>();
         rb = GetComponent<Rigidbody>();
-        gameVars = GameObject.Find("GameManager").GetComponent<Game_Variables>();
     }
     void Update()
     {
